@@ -1,51 +1,52 @@
 ---
-- name: check for installation in {{ kubernetes_helm_install_dir }}
+- name: Check for installation in {{ kubernetes_helm_install_dir }}
   become: true
-  stat:
+  ansible.builtin.stat:
     path: '{{ kubernetes_helm_install_dir }}'
   changed_when: false
   register: kubernetes_helm_binary_dir
 
-- when: not kubernetes_helm_binary_dir.stat.exists
+- name: Downloading and Installing...
+  when: not kubernetes_helm_binary_dir.stat.exists
   block:
-    - name: downloading {{ kubernetes_helm_url }}
+    - name: Downloading {{ kubernetes_helm_url }}
       become: true
       become_user: root
-      get_url:
+      ansible.builtin.get_url:
         url: '{{ kubernetes_helm_url }}'
         dest: '{{ kubernetes_helm_tmp_archive }}'
         checksum: '{{ kubernetes_helm_checksum }}'
-        mode: 0644
+        mode: '644'
 
-    - name: mkdir {{ kubernetes_helm_install_dir }}
+    - name: Mkdir {{ kubernetes_helm_install_dir }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ kubernetes_helm_install_dir }}'
         state: directory
-        mode: 0755
+        mode: '755'
 
-    - name: unarchive {{ kubernetes_helm_tmp_archive }} to {{ kubernetes_helm_install_dir }}
+    - name: Unarchive {{ kubernetes_helm_tmp_archive }} to {{ kubernetes_helm_install_dir }}
       become: true
       become_user: root
-      unarchive:
+      ansible.builtin.unarchive:
         remote_src: true
         src: '{{ kubernetes_helm_tmp_archive }}'
         dest: '{{ kubernetes_helm_install_dir }}'
         creates: '{{ kubernetes_helm_install_subdir }}'
   always:
-    - name: cleanup {{ kubernetes_helm_tmp_archive }}
+    - name: Cleanup {{ kubernetes_helm_tmp_archive }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ kubernetes_helm_tmp_archive }}'
         state: absent
 
-- name: creating link in {{ kubernetes_helm_link_bin_dir }} to {{ kubernetes_helm_install_exe }}
+- name: Creating link in {{ kubernetes_helm_link_bin_dir }} to {{ kubernetes_helm_install_exe }}
   become: true
   become_user: root
   with_items: '{{ kubernetes_helm_links }}'
-  file:
+  ansible.builtin.file:
     src: '{{ kubernetes_helm_install_exe }}'
     dest: '{{ item }}'
     state: link

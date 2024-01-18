@@ -1,9 +1,14 @@
 ---
-- hosts: all
-  roles:
-    - role: '{{ playbook_dir }}'
+- name: Testing andrewrothstein.kubernetes_helm
+  hosts: all
   tasks:
-    - command: /usr/local/bin/helm version
+    - name: Installing andrewrothstein.kubernetes_helm
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'helm version'
+      ansible.builtin.command: /usr/local/bin/helm version
+      changed_when: false
       register: kubernetes_helm_test_output
-    - debug:
+    - name: Output of 'helm version'
+      ansible.builtin.debug:
         msg: '{{ kubernetes_helm_test_output.stdout }}'

@@ -1,7 +1,8 @@
 ---
-- include_role:
+- name: Install andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
     name: andrewrothstein.unarchivedeps
-- name: resolve platform specific vars
+- name: Resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
     - files:
@@ -12,4 +13,5 @@
       paths:
         - '{{ role_path }}/vars'
 
-- include_tasks: '{{ kubernetes_helm_installer | default("tgz") }}.yml'
+- name: Installing with {{ kubernetes_helm_installer | default("tgz") }}
+  ansible.builtin.include_tasks: '{{ kubernetes_helm_installer | default("tgz") }}.yml'
