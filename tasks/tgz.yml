@@ -26,6 +26,10 @@
         state: directory
         mode: '755'
 
+    - name: Install andrewrothstein.unarchivedeps
+      ansible.builtin.include_role:
+        name: andrewrothstein.unarchivedeps
+
     - name: Unarchive {{ kubernetes_helm_tmp_archive }} to {{ kubernetes_helm_install_dir }}
       become: true
       become_user: root
