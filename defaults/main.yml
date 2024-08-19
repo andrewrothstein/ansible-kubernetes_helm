@@ -1,6 +1,6 @@
 ---
 kubernetes_helm_mirror: https://get.helm.sh
-kubernetes_helm_ver: v3.15.3
+kubernetes_helm_ver: v3.15.4
 kubernetes_helm_os: linux
 kubernetes_helm_arch_map:
   386: 386
@@ -1437,3 +1437,20 @@ kubernetes_helm_checksums:
     linux-ppc64le: sha256:fac86a8a0515e1f4593d6288426c99f2b3edac946b7f118fcfe03e4a09523f25
     # https://get.helm.sh/helm-v3.15.3-windows-amd64.zip.sha256
     windows-amd64: sha256:fd857635bbb38b20a91731e5d084c2e21503b0f797b153e3246de01676819f23
+  v3.15.4:
+    # https://get.helm.sh/helm-v3.15.4-darwin-amd64.tar.gz.sha256
+    darwin-amd64: sha256:1bc3f354f7ce4d7fd9cfa5bcc701c1f32c88d27076d96c2792d5b5226062aee5
+    # https://get.helm.sh/helm-v3.15.4-darwin-arm64.tar.gz.sha256
+    darwin-arm64: sha256:88115846a1fb58f8eb8f64fec5c343d95ca394f1be811602fa54a887c98730ac
+    # https://get.helm.sh/helm-v3.15.4-linux-amd64.tar.gz.sha256
+    linux-amd64: sha256:11400fecfc07fd6f034863e4e0c4c4445594673fd2a129e701fe41f31170cfa9
+    # https://get.helm.sh/helm-v3.15.4-linux-arm.tar.gz.sha256
+    linux-arm: sha256:aa3fb3014d147e5dcf8bfe4f6d5fe8677029ed720d4a4bcc64e54cb745a72206
+    # https://get.helm.sh/helm-v3.15.4-linux-arm64.tar.gz.sha256
+    linux-arm64: sha256:fa419ecb139442e8a594c242343fafb7a46af3af34041c4eac1efcc49d74e626
+    # https://get.helm.sh/helm-v3.15.4-linux-386.tar.gz.sha256
+    linux-386: sha256:d1457e19fa7b467aaa53433793c446582956905c66d4655655010cc9cef995d3
+    # https://get.helm.sh/helm-v3.15.4-linux-ppc64le.tar.gz.sha256
+    linux-ppc64le: sha256:e4efce93723f52dd858e9046ea836c9c75f346facce1b87b8cf78c817b97e6ac
+    # https://get.helm.sh/helm-v3.15.4-windows-amd64.zip.sha256
+    windows-amd64: sha256:023b96f02e812cda1a1d5c950cb321834a56f4a50ca90146ff447a81be0ae5b6
