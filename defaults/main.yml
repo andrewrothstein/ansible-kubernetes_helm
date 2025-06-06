@@ -1,6 +1,6 @@
 ---
 kubernetes_helm_mirror: https://get.helm.sh
-kubernetes_helm_ver: v3.17.3
+kubernetes_helm_ver: v3.18.2
 kubernetes_helm_os: linux
 kubernetes_helm_arch_map:
   386: 386
@@ -1590,3 +1590,54 @@ kubernetes_helm_checksums:
     linux-ppc64le: sha256:b821885a502b2fa159e3ef3afe9cde6e6c9876d4a623f18868829c3ee4a3c64c
     # https://get.helm.sh/helm-v3.17.3-windows-amd64.zip.sha256
     windows-amd64: sha256:8ea93e2f6285e649dede583ac90ff8cdb938ca53ec6cf5fe909f2303fbc22d96
+  v3.18.0:
+    # https://get.helm.sh/helm-v3.18.0-darwin-amd64.tar.gz.sha256
+    darwin-amd64: sha256:2be99836549413c2f0212d644e8740abd8ba5d7f55484c29d3363cea339891d9
+    # https://get.helm.sh/helm-v3.18.0-darwin-arm64.tar.gz.sha256
+    darwin-arm64: sha256:4ce30bd86a3fc4f31d297827a5bf5b10ced8c4da2ff810bf9f53f561dbed7d10
+    # https://get.helm.sh/helm-v3.18.0-linux-amd64.tar.gz.sha256
+    linux-amd64: sha256:961e587fc2c03807f8a99ac25ef063fa9e6915f1894729399cbb95d2a79af931
+    # https://get.helm.sh/helm-v3.18.0-linux-arm.tar.gz.sha256
+    linux-arm: sha256:88f6264801fd9c5bb3d2d24c7b3da4e239d137b39bacd18d25b22823e6bd31f7
+    # https://get.helm.sh/helm-v3.18.0-linux-arm64.tar.gz.sha256
+    linux-arm64: sha256:489c9d2d3ea4e095331249d74b4407fb5ac1d338c28429d70cdedccfe6e2b029
+    # https://get.helm.sh/helm-v3.18.0-linux-386.tar.gz.sha256
+    linux-386: sha256:3302c90957e259897d238feee65e05abb3fc586ab80a49cb577fd123b2e94cb3
+    # https://get.helm.sh/helm-v3.18.0-linux-ppc64le.tar.gz.sha256
+    linux-ppc64le: sha256:559036fe183593488275a19796ca0b13f56e9d586b697a0d968e8b1e24472d7c
+    # https://get.helm.sh/helm-v3.18.0-windows-amd64.zip.sha256
+    windows-amd64: sha256:ae6a1b832043e3433d2823fc42692057dbf007efad34292708130b412c169a94
+  v3.18.1:
+    # https://get.helm.sh/helm-v3.18.1-darwin-amd64.tar.gz.sha256
+    darwin-amd64: sha256:3973bda1863d74614e1dca69ee65050928a80b88f6d10ec514fa7886a02de309
+    # https://get.helm.sh/helm-v3.18.1-darwin-arm64.tar.gz.sha256
+    darwin-arm64: sha256:93562d2a0e34a505954e5b9556e319f390bc5bd07bed754ddc038b09cfe6fbd9
+    # https://get.helm.sh/helm-v3.18.1-linux-amd64.tar.gz.sha256
+    linux-amd64: sha256:b1c7e8e261fd30f34c617282813ecafc63628fcd59a255a9fc51b1fe43394c05
+    # https://get.helm.sh/helm-v3.18.1-linux-arm.tar.gz.sha256
+    linux-arm: sha256:6a58bf4091f798ac1a6fa7e21ea142fe138f5b688f2e3af0c49147f99210fff6
+    # https://get.helm.sh/helm-v3.18.1-linux-arm64.tar.gz.sha256
+    linux-arm64: sha256:5ddc8fbd4b17857754a95be799543ceafa5aa9532b05f738ee590a76bb049988
+    # https://get.helm.sh/helm-v3.18.1-linux-386.tar.gz.sha256
+    linux-386: sha256:890bfd82f9fc8fe829f33c80e3d31463fc22d0f3605aaf3b009b3d7a616ba9cc
+    # https://get.helm.sh/helm-v3.18.1-linux-ppc64le.tar.gz.sha256
+    linux-ppc64le: sha256:4d03617f742e4774ddf2170840ec385c67abf0db93e5df1aa9a036bb1275988e
+    # https://get.helm.sh/helm-v3.18.1-windows-amd64.zip.sha256
+    windows-amd64: sha256:d0f74d2043dae67992d4dcdd430844aa4817e4735a42ef9ecb4d2f042e2ed2bb
+  v3.18.2:
+    # https://get.helm.sh/helm-v3.18.2-darwin-amd64.tar.gz.sha256
+    darwin-amd64: sha256:8bfc850d4451dccecb01c73bdc844cb1b3ed2f1b90a89fc47e7b1670e1f369ec
+    # https://get.helm.sh/helm-v3.18.2-darwin-arm64.tar.gz.sha256
+    darwin-arm64: sha256:d82a30d654862668ae1e58dbbba5ea6ed5f84312da59666ef628bf73b2188d39
+    # https://get.helm.sh/helm-v3.18.2-linux-amd64.tar.gz.sha256
+    linux-amd64: sha256:c5deada86fe609deefdf40e9cbbe3da2f8cf3f6a4551a0ebe7886dc8fcf98bce
+    # https://get.helm.sh/helm-v3.18.2-linux-arm.tar.gz.sha256
+    linux-arm: sha256:a848c9db5e51f7cc4975bcfbba415c30cdfb67e141b6efc0e8b3a66cd89e8607
+    # https://get.helm.sh/helm-v3.18.2-linux-arm64.tar.gz.sha256
+    linux-arm64: sha256:03181a494a0916b370a100a5b2536104963b095be53fb23d1e29b2afb1c7de8d
+    # https://get.helm.sh/helm-v3.18.2-linux-386.tar.gz.sha256
+    linux-386: sha256:dae13caca7a24d0adff3f59183a269275522964d75c1e4cbdb0ffaddc659e7bc
+    # https://get.helm.sh/helm-v3.18.2-linux-ppc64le.tar.gz.sha256
+    linux-ppc64le: sha256:1d21b2acdd79a13d20585b61fe90bababdd3f7047530d66aad650869c772b5c3
+    # https://get.helm.sh/helm-v3.18.2-windows-amd64.zip.sha256
+    windows-amd64: sha256:49fc2d74a351974ebf544f8252a4e43d7e5f9e0137472415393178c2d3996e9f
